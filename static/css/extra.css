@@ -1,0 +1,507 @@
+/* ===========================
+   现代化博客自定义样式
+   by 孙晨东
+   =========================== */
+
+/* ========== 全局变量 ========== */
+:root {
+  /* 主色调 - 蓝紫渐变 */
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #f093fb;
+  
+  /* 中性色 */
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --border-color: #e2e8f0;
+  
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* 动画时间 */
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 350ms;
+}
+
+/* 深色模式变量 */
+.dark {
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --border-color: #4a5568;
+}
+
+/* ========== 全局优化 ========== */
+* {
+  transition: background-color var(--transition-base) ease, 
+              color var(--transition-base) ease,
+              border-color var(--transition-base) ease,
+              box-shadow var(--transition-base) ease;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* ========== 渐变背景 ========== */
+.main {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  min-height: 100vh;
+}
+
+.dark .main {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+}
+
+/* ========== 头部优化 ========== */
+.nav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dark .nav {
+  background-color: rgba(26, 32, 44, 0.9) !important;
+}
+
+.logo a {
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== 卡片样式 ========== */
+.post-entry,
+.first-entry {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base) ease;
+  overflow: hidden;
+}
+
+.post-entry:hover,
+.first-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.post-entry:hover .entry-header h2,
+.first-entry:hover .entry-header h2 {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== 按钮优化 ========== */
+button,
+.button,
+.post-single .post-content a.button {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base) ease;
+  box-shadow: var(--shadow-md);
+}
+
+button:hover,
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  opacity: 0.9;
+}
+
+/* ========== 链接样式 ========== */
+.post-single .post-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast) ease;
+  font-weight: 500;
+}
+
+.post-single .post-content a:hover {
+  border-bottom-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* ========== 代码块优化 ========== */
+pre,
+code {
+  border-radius: 8px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.post-single .post-content pre {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+}
+
+.post-single .post-content code {
+  background: var(--bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.post-single .post-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* 代码复制按钮 */
+.highlight-copy-btn {
+  background: var(--primary-color) !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 0.5rem !important;
+  opacity: 0.9;
+}
+
+.highlight-copy-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ========== 引用块优化 ========== */
+.post-single .post-content blockquote {
+  border-left: 4px solid var(--primary-color);
+  background: linear-gradient(90deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+/* ========== 表格优化 ========== */
+.post-single .post-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 1.5rem 0;
+}
+
+.post-single .post-content table thead {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.post-single .post-content table th,
+.post-single .post-content table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.post-single .post-content table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+/* ========== 标签样式 ========== */
+.post-tags a,
+.tag-entry a {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  color: var(--primary-color) !important;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: all var(--transition-fast) ease;
+}
+
+.post-tags a:hover,
+.tag-entry a:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========== TOC 目录优化 ========== */
+.toc {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.toc a {
+  color: var(--text-secondary);
+  transition: all var(--transition-fast) ease;
+  padding: 0.3rem 0;
+  display: block;
+}
+
+.toc a:hover {
+  color: var(--primary-color);
+  padding-left: 0.5rem;
+}
+
+.toc a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 0.5rem;
+}
+
+/* ========== 滚动条美化 ========== */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 10px;
+  border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+/* ========== 分页优化 ========== */
+.pagination a,
+.page-link {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  transition: all var(--transition-fast) ease;
+}
+
+.pagination a:hover,
+.page-link:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white !important;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ========== 搜索框优化 ========== */
+#searchInput {
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  transition: all var(--transition-base) ease;
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+#searchInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+/* ========== 社交图标优化 ========== */
+.social-icons a {
+  transition: all var(--transition-fast) ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.3));
+}
+
+.social-icons a svg {
+  transition: fill var(--transition-fast) ease;
+}
+
+.social-icons a:hover svg {
+  fill: var(--primary-color);
+}
+
+/* ========== 面包屑优化 ========== */
+.breadcrumbs {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+  color: var(--primary-color);
+  transition: color var(--transition-fast) ease;
+}
+
+.breadcrumbs a:hover {
+  color: var(--secondary-color);
+}
+
+/* ========== 响应式优化 ========== */
+@media (max-width: 768px) {
+  .post-entry,
+  .first-entry {
+    border-radius: 8px;
+  }
+  
+  .post-single .post-content pre {
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .toc {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
+
+/* ========== 图片优化 ========== */
+.post-single .post-content img {
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base) ease;
+  margin: 1.5rem 0;
+}
+
+.post-single .post-content img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ========== 首页特效 ========== */
+.profile {
+  background: var(--bg-primary);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.profile .profile_inner h1 {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+/* ========== 归档页面优化 ========== */
+.archive-year {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.archive-entry {
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all var(--transition-fast) ease;
+}
+
+.archive-entry:hover {
+  background: rgba(102, 126, 234, 0.05);
+  padding-left: 1rem;
+}
+
+.archive-entry-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ========== 加载动画 ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-entry,
+.first-entry,
+.archive-entry {
+  animation: fadeIn var(--transition-slow) ease;
+}
+
+/* ========== 打印样式 ========== */
+@media print {
+  .nav,
+  .footer,
+  .post-footer,
+  .share-buttons,
+  .toc {
+    display: none;
+  }
+  
+  .post-single .post-content {
+    max-width: 100%;
+  }
+}
+
+/* ========== 无障碍优化 ========== */
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ========== 高对比度模式支持 ========== */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0044cc;
+    --secondary-color: #0033aa;
+    --border-color: #000000;
+  }
+  
+  .dark {
+    --border-color: #ffffff;
+  }
+}
+
+/* ========== 减少动画运动 ========== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
