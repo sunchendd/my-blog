@@ -3,7 +3,7 @@ languageCode = "zh-cn"
 title = "孙晨东的博客"
 theme = "PaperMod"
 # 分页设置
-paginate = 10
+# paginate = 10  # Deprecated in Hugo v0.128.0
 # 启用 robots.txt
 enableRobotsTXT = true
 # 语言代码
