@@ -68,7 +68,11 @@ buildFuture = false
   disableThemeToggle = false
   
   # 自定义 CSS
-  assets.customCSS = ["css/extra.css"]
+  [params.assets]
+    disableHLJS = false
+  
+  [[params.assets.css]]
+    src = "css/extra.css"
 
   # 搜索配置
   [params.fuseOpts]

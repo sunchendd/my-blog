@@ -39,11 +39,20 @@
 }
 
 /* ========== 全局优化 ========== */
-* {
+/* Apply transitions to interactive elements only */
+a,
+button,
+.post-entry,
+.first-entry,
+.nav,
+input,
+textarea,
+select {
   transition: background-color var(--transition-base) ease, 
               color var(--transition-base) ease,
               border-color var(--transition-base) ease,
-              box-shadow var(--transition-base) ease;
+              box-shadow var(--transition-base) ease,
+              transform var(--transition-base) ease;
 }
 
 body {
