@@ -2,6 +2,16 @@ baseURL = "https://sunchendd.github.io/my-blog/"
 languageCode = "zh-cn"
 title = "孙晨东的博客"
 theme = "PaperMod"
+# 分页设置
+paginate = 10
+# 启用表情符号
+enableEmoji = true
+# 启用 robots.txt
+enableRobotsTXT = true
+# 启用 Git 信息
+enableGitInfo = false
+# 语言代码
+defaultContentLanguage = "zh-cn"
 
 # 启用表情符号支持
 enableEmoji = true
@@ -126,6 +136,21 @@ buildFuture = false
     url = "/tags/"
     weight = 4
   
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 4
   [[menu.main]]
     identifier = "about"
     name = "👤 关于"
