@@ -2,7 +2,6 @@ baseURL = "https://sunchendd.github.io/my-blog/"
 languageCode = "zh-cn"
 title = "孙晨东的博客"
 theme = "PaperMod"
-paginate = 10
 
 # 启用表情符号支持
 enableEmoji = true
@@ -11,6 +10,10 @@ enableGitInfo = true
 # 构建草稿和未来的文章
 buildDrafts = false
 buildFuture = false
+
+# 分页配置
+[pagination]
+  pagerSize = 10
 
 [params]
   author = "孙晨东"

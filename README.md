@@ -1,6 +1,6 @@
 # 孙晨东的个人博客 🚀
 
-[![Hugo](https://img.shields.io/badge/Hugo-0.121.0-blue.svg)](https://gohugo.io)
+[![Hugo](https://img.shields.io/badge/Hugo-0.146.0-blue.svg)](https://gohugo.io)
 [![Theme](https://img.shields.io/badge/Theme-PaperMod-orange.svg)](https://github.com/adityatelange/hugo-PaperMod)
 [![Deploy](https://github.com/sunchendd/my-blog/actions/workflows/hugo.yml/badge.svg)](https://github.com/sunchendd/my-blog/actions/workflows/hugo.yml)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -30,7 +30,7 @@
 
 ## 🛠️ 技术栈
 
-- **静态网站生成器**: [Hugo Extended v0.121.0](https://gohugo.io/)
+- **静态网站生成器**: [Hugo Extended v0.146.0](https://gohugo.io/)
 - **主题**: [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
 - **部署**: GitHub Pages
 - **CI/CD**: GitHub Actions
@@ -42,7 +42,7 @@
 ### 前置要求
 
 - Git
-- Hugo Extended v0.121.0 或更高版本
+- Hugo Extended v0.146.0 或更高版本
 
 ### 安装 Hugo
 
@@ -53,8 +53,8 @@ brew install hugo
 
 **Linux**:
 ```bash
-wget https://github.com/gohugoio/hugo/releases/download/v0.121.0/hugo_extended_0.121.0_linux-amd64.deb
-sudo dpkg -i hugo_extended_0.121.0_linux-amd64.deb
+wget https://github.com/gohugoio/hugo/releases/download/v0.146.0/hugo_extended_0.146.0_linux-amd64.deb
+sudo dpkg -i hugo_extended_0.146.0_linux-amd64.deb
 ```
 
 **Windows**:
