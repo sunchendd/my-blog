@@ -1,6 +1,6 @@
 ---
-title: "文章归档"
+title: "归档"
 layout: "archives"
 url: "/archives/"
-summary: archives
+summary: "文章归档"
 ---

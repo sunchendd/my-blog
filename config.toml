@@ -13,11 +13,24 @@ enableGitInfo = false
 # 语言代码
 defaultContentLanguage = "zh-cn"
 
+# 启用表情符号支持
+enableEmoji = true
+# 启用Git信息
+enableGitInfo = true
+# 构建草稿和未来的文章
+buildDrafts = false
+buildFuture = false
+
+# 分页配置
+[pagination]
+  pagerSize = 10
+
 [params]
   author = "孙晨东"
   description = "孙晨东，杭州电子科技大学毕业，超聚变数字技术有限公司高级工程师，专注技术干货与有趣内容分享。"
-  keywords = ["技术博客", "程序员", "软件开发", "孙晨东", "杭州电子科技大学", "超聚变"]
-  # 显示设置
+  keywords = ["博客", "技术", "编程", "开发", "孙晨东"]
+  
+  # 阅读体验优化
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
@@ -25,28 +38,31 @@ defaultContentLanguage = "zh-cn"
   ShowCodeCopyButtons = true
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-  disableScrollToTop = false
-  comments = true
-  hidemeta = false
-  hideSummary = false
-  showtoc = true
-  tocopen = true
+  ShowToc = true
+  TocOpen = false
   
-  # SEO 设置
-  googleAnalytics = "" # 如需使用 Google Analytics，请填写 ID
-  
-  # 资源设置
-  assets.disableHLJS = false
-  assets.disableFingerprinting = false
+  # 评论系统配置 (使用 giscus)
+  # 需要在 GitHub 仓库设置中启用 Discussions 功能
+  # [params.comments]
+  #   provider = "giscus"
+  # [params.giscus]
+  #   repo = "sunchendd/my-blog"
+  #   repoId = "your-repo-id"
+  #   category = "Announcements"
+  #   categoryId = "your-category-id"
+  #   mapping = "pathname"
+  #   theme = "preferred_color_scheme"
 
   [params.homeInfoParams]
-    Title = "你好，我是孙晨东"
-    Content = "一枚程序员，毕业于杭州电子科技大学，现任超聚变数字技术有限公司高级工程师。热爱技术，专注干货分享，偶尔也会整点有趣的内容！"
-    image = "/images/avatar.png"
+    Title = "你好，我是孙晨东 👋"
+    Content = """
+一枚程序员，毕业于杭州电子科技大学，现任超聚变数字技术有限公司高级工程师。
 
-  # 社交图标
+💻 热爱技术，专注干货分享  
+🎯 偶尔也会整点有趣的内容  
+📚 记录学习与成长的点点滴滴
+"""
+
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/chendongsun"
@@ -54,47 +70,21 @@ defaultContentLanguage = "zh-cn"
     name = "email"
     url = "mailto:sunchend@outlook.com"
   [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://linkedin.com/in/sunchendong"
-  [[params.socialIcons]]
-    name = "twitter"
-    url = "https://twitter.com/sunchendong"
-  
-  # 主题设置
+    name = "rss"
+    url = "/index.xml"
+
+  # 主题配置
   defaultTheme = "auto"
   disableThemeToggle = false
   
   # 自定义 CSS
-  customCSS = ["css/extra.css"]
+  [params.assets]
+    disableHLJS = false
   
-  # 封面图片设置
-  [params.cover]
-    hidden = false
-    hiddenInList = false
-    hiddenInSingle = false
-  
-  # 评论系统配置 (使用 giscus)
-  [params.giscus]
-    repo = "sunchendd/my-blog"
-    repoID = "" # 请在 https://giscus.app 获取
-    category = "Announcements"
-    categoryID = "" # 请在 https://giscus.app 获取
-    mapping = "pathname"
-    strict = "0"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
-    inputPosition = "bottom"
-    theme = "preferred_color_scheme"
-    lang = "zh-CN"
-    loading = "lazy"
-  
-  # 编辑文章链接
-  [params.editPost]
-    URL = "https://github.com/sunchendd/my-blog/tree/main/content"
-    Text = "建议修改"
-    appendFilePath = true
-  
-  # 搜索设置
+  [[params.assets.css]]
+    src = "css/extra.css"
+
+  # 搜索配置
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
@@ -104,12 +94,48 @@ defaultContentLanguage = "zh-cn"
     minMatchCharLength = 0
     keys = ["title", "permalink", "summary", "content"]
 
+  # 封面图配置
+  [params.cover]
+    linkFullImages = true
+    responsiveImages = true
+
+  # SEO 优化
+  [params.analytics]
+    # google = "G-MEASUREMENT_ID"
+    # bing = "BING_ID"
+  
+  # 标签和分类配置
+  [params.label]
+    text = "孙晨东的博客"
+    icon = "/images/avatar.png"
+    iconHeight = 35
+
+# 菜单配置
 [menu]
   [[menu.main]]
     identifier = "home"
-    name = "首页"
+    name = "🏠 首页"
     url = "/"
     weight = 1
+  
+  [[menu.main]]
+    identifier = "search"
+    name = "🔍 搜索"
+    url = "/search/"
+    weight = 2
+  
+  [[menu.main]]
+    identifier = "archives"
+    name = "📚 归档"
+    url = "/archives/"
+    weight = 3
+  
+  [[menu.main]]
+    identifier = "tags"
+    name = "🏷️ 标签"
+    url = "/tags/"
+    weight = 4
+  
   [[menu.main]]
     identifier = "posts"
     name = "文章"
@@ -127,46 +153,44 @@ defaultContentLanguage = "zh-cn"
     weight = 4
   [[menu.main]]
     identifier = "about"
-    name = "关于"
+    name = "👤 关于"
     url = "/about/"
     weight = 5
-  [[menu.main]]
-    identifier = "search"
-    name = "搜索"
-    url = "/search/"
-    weight = 6
 
-# 输出设置
+# 输出配置
 [outputs]
-  home = ["HTML", "RSS", "JSON"] # JSON 用于搜索功能
+  home = ["HTML", "RSS", "JSON"]
 
-# 代码高亮设置
+# 分类系统配置
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+# Markdown 配置
 [markup]
   [markup.highlight]
     anchorLineNos = false
     codeFences = true
     guessSyntax = true
-    lineNos = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
     lineNumbersInTable = true
     noClasses = false
     style = "monokai"
     tabWidth = 4
-  [markup.goldmark.renderer]
-    unsafe = true
+  
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  
   [markup.tableOfContents]
     endLevel = 3
     ordered = false
     startLevel = 2
 
-# 隐私设置
-[privacy]
-  [privacy.twitter]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
-
-# 分类设置
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
+# 永久链接配置
+[permalinks]
+  posts = "/posts/:slug/" 
