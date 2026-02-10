@@ -1,0 +1,518 @@
+/* ===================================
+   自定义样式 - 现代化 UI 设计
+   =================================== */
+
+/* --- 基础变量 --- */
+:root {
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  --border-radius: 12px;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- 平滑滚动 --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 整体容器优化 --- */
+.main {
+  padding: 0 20px;
+  max-width: 100%;
+}
+
+/* --- 首页信息卡片优化 --- */
+.first-entry {
+  background: var(--entry);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.first-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.first-entry .entry-header h1 {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* --- 文章卡片优化 --- */
+.post-entry {
+  background: var(--entry);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.post-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.entry-header h2 {
+  transition: var(--transition-smooth);
+}
+
+.post-entry:hover .entry-header h2 {
+  color: var(--primary);
+}
+
+/* --- 按钮样式优化 --- */
+.button,
+button,
+.post-nav a,
+.paginav a {
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+.button:hover,
+button:hover,
+.post-nav a:hover,
+.paginav a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  background: var(--primary);
+  color: var(--theme);
+  border-color: var(--primary);
+}
+
+/* --- 链接样式优化 --- */
+.entry-content a,
+.post-content a {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-smooth);
+  font-weight: 500;
+}
+
+.entry-content a:hover,
+.post-content a:hover {
+  border-bottom-color: var(--primary);
+  background: linear-gradient(to right, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- 代码块优化 --- */
+.highlight {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+
+pre {
+  border-radius: var(--border-radius);
+  padding: 1.5rem !important;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+  border-radius: 4px;
+  padding: 0.2em 0.4em;
+  background: var(--code-bg);
+}
+
+.highlight pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* 代码复制按钮 */
+.highlight-copy-btn {
+  border-radius: 6px;
+  transition: var(--transition-smooth);
+}
+
+.highlight-copy-btn:hover {
+  transform: scale(1.1);
+  background: var(--primary) !important;
+}
+
+/* --- 标签样式优化 --- */
+.post-tags a,
+.terms-tags a {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  border: none;
+  display: inline-block;
+  margin: 0.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.post-tags a:hover,
+.terms-tags a:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--shadow-md);
+  opacity: 0.9;
+}
+
+/* --- 目录 (TOC) 优化 --- */
+.toc {
+  background: var(--code-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.toc details summary {
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: var(--transition-smooth);
+}
+
+.toc details summary:hover {
+  background: var(--tertiary);
+}
+
+.toc ul {
+  margin-top: 1rem;
+}
+
+.toc a {
+  transition: var(--transition-smooth);
+  padding: 0.3rem 0;
+  display: block;
+}
+
+.toc a:hover {
+  color: var(--primary);
+  padding-left: 0.5rem;
+}
+
+/* --- 分页导航优化 --- */
+.paginav {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+/* --- 社交图标优化 --- */
+.social-icons a {
+  transition: var(--transition-smooth);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3rem;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: var(--shadow-md);
+  background: var(--gradient-primary);
+}
+
+.social-icons a:hover svg {
+  color: white;
+}
+
+/* --- 面包屑优化 --- */
+.breadcrumbs a {
+  transition: var(--transition-smooth);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.breadcrumbs a:hover {
+  background: var(--tertiary);
+  color: var(--primary);
+}
+
+/* --- 搜索框优化 --- */
+#searchInput {
+  border-radius: var(--border-radius);
+  border: 2px solid var(--border);
+  padding: 1rem;
+  transition: var(--transition-smooth);
+  font-size: 1rem;
+}
+
+#searchInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  outline: none;
+}
+
+#searchResults li {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  transition: var(--transition-smooth);
+  border: 1px solid var(--border);
+}
+
+#searchResults li:hover {
+  background: var(--tertiary);
+  border-color: var(--primary);
+  transform: translateX(4px);
+}
+
+/* --- 归档页面优化 --- */
+.archive-year {
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 2rem 0 1rem;
+}
+
+.archive-month {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.archive-entry {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  transition: var(--transition-smooth);
+  border-left: 3px solid transparent;
+}
+
+.archive-entry:hover {
+  background: var(--tertiary);
+  border-left-color: var(--primary);
+  transform: translateX(4px);
+}
+
+/* --- 深色模式优化 --- */
+.dark {
+  --code-bg: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* --- 移动端优化 --- */
+@media (max-width: 768px) {
+  :root {
+    --border-radius: 8px;
+  }
+  
+  .first-entry,
+  .post-entry {
+    margin-bottom: 1rem;
+  }
+  
+  .main {
+    padding: 0 15px;
+  }
+  
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+    margin: 0 0.2rem;
+  }
+  
+  .post-tags a,
+  .terms-tags a {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* --- 图片优化 --- */
+.post-content img,
+.entry-content img {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content img:hover,
+.entry-content img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- 引用块优化 --- */
+blockquote {
+  border-left: 4px solid var(--primary);
+  border-radius: 0 8px 8px 0;
+  background: var(--code-bg);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm);
+  font-style: italic;
+}
+
+/* --- 表格优化 --- */
+table {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+th {
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:hover {
+  background: var(--tertiary);
+}
+
+/* --- 头部导航优化 --- */
+.nav a {
+  transition: var(--transition-smooth);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin: 0 0.2rem;
+}
+
+.nav a:hover {
+  background: var(--tertiary);
+  color: var(--primary);
+}
+
+/* --- Footer 优化 --- */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* --- 动画效果 --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-entry,
+.first-entry {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* --- 分享按钮优化 --- */
+.share-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.share-buttons a {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: var(--transition-smooth);
+  background: var(--tertiary);
+  border: 1px solid var(--border);
+}
+
+.share-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  background: var(--primary);
+  color: white;
+}
+
+/* --- 加载动画 --- */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--border);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- 优化滚动条 --- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* --- 响应式字体 --- */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+}
