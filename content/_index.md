@@ -1,13 +1,54 @@
 ---
-title: "孙晨东的博客"
-description: "干货满满，偶尔有趣"
+title: "孙晨东"
+description: "高级软件工程师"
 ---
 
-# 欢迎来到我的博客！
+<div class="hero-section">
 
-这里不仅有技术干货（编程、架构、云原生、自动化等），也有程序员的趣事和成长故事。
-- **最新干货**：Hugo 博客搭建、Nginx 配置、自动化运维、性能优化……
-- **有趣内容**：程序员日常、技术吐槽、成长感悟……
+<div class="avatar-wrapper">
+<img src="https://avatars.githubusercontent.com/sunchendd" alt="孙晨东" class="profile-avatar">
+</div>
 
-关注我，和我一起成长、一起玩技术！
+<h1 class="hero-name">孙晨东</h1>
 
+<p class="hero-title">高级软件工程师</p>
+
+<p class="hero-company">超聚变数字技术有限公司</p>
+
+<p class="hero-bio">
+
+长期关注大模型推理加速技术，特别是 Speculative Decoding 与动态混合精度推理方向。同时参与分布式系统架构设计和性能调优工作，涵盖高并发系统、微服务、云原生、热迁移、故障恢复、资源管理等领域。
+
+</p>
+
+<div class="patent-count">
+
+<a href="https://patents.google.com/?q=%E5%AD%99%E6%99%A8%E4%B8%9C+%E8%B6%85%E8%81%9A%E5%8F%98" target="_blank" rel="noopener noreferrer">
+发明专利 <strong>8</strong> 项
+</a>
+
+</div>
+
+</div>
+
+---
+
+<div class="contact-section">
+
+<h3>联系方式</h3>
+
+<div class="contact-links">
+
+<a href="mailto:sunchend@outlook.com" class="contact-link">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+sunchend@outlook.com
+</a>
+
+<a href="https://github.com/sunchendd" target="_blank" rel="noopener noreferrer" class="contact-link">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+github.com/sunchendd
+</a>
+
+</div>
+
+</div>

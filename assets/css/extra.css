@@ -525,3 +525,276 @@ footer {
     font-size: 18px;
   }
 }
+
+/* ===================================
+   简洁优雅首页样式
+   =================================== */
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.avatar-wrapper {
+  margin-bottom: 2rem;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1px;
+}
+
+.hero-title {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-company {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.hero-bio {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #374151;
+  margin-bottom: 2.5rem;
+}
+
+.patent-count {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--tertiary) 0%, #f3f4f6 100%);
+  border-radius: 30px;
+  font-size: 1rem;
+  color: #4b5563;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.patent-count strong {
+  font-size: 2rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0.3rem;
+}
+
+.core-section {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.core-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.expertise-card {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  border: 1px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border-color: var(--primary);
+}
+
+.expertise-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.expertise-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.contact-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid #e5e7eb;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-section h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.post-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 3rem 0;
+}
+
+.dark .hero-bio {
+  color: #d1d5db;
+}
+
+.dark .patent-count {
+  background: rgba(255,255,255,0.05);
+  color: #9ca3af;
+}
+
+.dark .expertise-card {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.dark .expertise-card h3 {
+  color: #f9fafb;
+}
+
+.dark .expertise-card p {
+  color: #9ca3af;
+}
+
+.dark .core-section h2 {
+  color: #f9fafb;
+}
+
+.dark .contact-section {
+  border-top-color: rgba(255,255,255,0.1);
+}
+
+.dark .contact-section h3 {
+  color: #f9fafb;
+}
+
+.dark .contact-link {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+  color: #d1d5db;
+}
+
+.dark .contact-link svg {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 1.5rem 2rem;
+  }
+  
+  .hero-name {
+    font-size: 2.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.1rem;
+  }
+  
+  .hero-bio {
+    font-size: 1rem;
+  }
+  
+  .patent-count {
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .core-section {
+    padding: 0 1.5rem;
+  }
+  
+  .expertise-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .contact-links {
+    max-width: 100%;
+  }
+}
