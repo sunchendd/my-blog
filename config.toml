@@ -50,7 +50,7 @@ buildFuture = false
   [params.label]
     text = ""
     icon = "/images/avatar.png"
-    iconHeight = 40
+    iconHeight = 20
 
 [menu]
 
