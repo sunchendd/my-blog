@@ -48,8 +48,8 @@ buildFuture = false
     src = "css/extra.css"
 
   [params.label]
-    text = ""
-    icon = "/images/avatar.png"
+    text = "孙晨东"
+    icon = ""
     iconHeight = 20
 
 [menu]

@@ -541,17 +541,17 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.profile-avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+.avatar-wrapper .profile-avatar {
+  width: 60px;
+  height: 84px;
+  border-radius: 3px;
   object-fit: cover;
-  border: 2px solid var(--primary);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border: 2px solid var(--theme);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
   transition: transform 0.3s ease;
 }
 
-.profile-avatar:hover {
+.avatar-wrapper .profile-avatar:hover {
   transform: scale(1.05);
 }
 
