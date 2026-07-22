@@ -590,23 +590,14 @@ footer {
 }
 
 .patent-count {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, var(--tertiary) 0%, #f3f4f6 100%);
-  border-radius: 30px;
-  font-size: 1rem;
-  color: #4b5563;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  font-size: 1.05rem;
+  line-height: 2;
+  color: #374151;
+  margin: 0 0 1.5rem;
 }
 
 .patent-count strong {
-  font-size: 2rem;
-  font-weight: 800;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin: 0 0.3rem;
+  font-weight: 600;
 }
 
 .core-section {
@@ -720,8 +711,7 @@ footer {
 }
 
 .dark .patent-count {
-  background: rgba(255,255,255,0.05);
-  color: #9ca3af;
+  color: #d1d5db;
 }
 
 .dark .expertise-card {
