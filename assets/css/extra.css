@@ -542,8 +542,8 @@ footer {
 }
 
 .profile-avatar {
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--primary);
