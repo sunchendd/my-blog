@@ -542,11 +542,11 @@ footer {
 }
 
 .profile-avatar {
-  width: 96px;
-  height: 96px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--primary);
+  border: 2px solid var(--primary);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
 }
