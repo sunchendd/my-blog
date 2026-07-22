@@ -538,12 +538,12 @@ footer {
 }
 
 .avatar-wrapper {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .profile-avatar {
-  width: 150px;
-  height: 150px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary);
