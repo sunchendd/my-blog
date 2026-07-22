@@ -6,7 +6,7 @@ description: "高级软件工程师"
 <div class="hero-section">
 
 <div class="avatar-wrapper">
-<img src="https://avatars.githubusercontent.com/sunchendd" alt="孙晨东" class="profile-avatar">
+<img src="https://avatars.githubusercontent.com/sunchendd?s=96" alt="孙晨东" class="profile-avatar" srcset="https://avatars.githubusercontent.com/sunchendd?s=48 1x, https://avatars.githubusercontent.com/sunchendd?s=96 2x">
 </div>
 
 <h1 class="hero-name">孙晨东</h1>
